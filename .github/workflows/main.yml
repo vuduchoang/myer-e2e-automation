@@ -12,6 +12,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Install Google Chrome
+        run: |
+          sudo apt update
+          sudo apt install -y google-chrome-stable
+          google-chrome --version
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
