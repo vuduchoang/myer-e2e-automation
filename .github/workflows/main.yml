@@ -1,6 +1,7 @@
 name: Staging E2E Tests
 run-name: Staging E2E Tests
-on: [push]
+on: 
+  workflow_dispatch:
 jobs:
   Install-Required-Libs :
     runs-on: ubuntu-latest
