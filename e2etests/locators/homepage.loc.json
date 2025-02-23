@@ -1,0 +1,7 @@
+{
+    "signinJoinLink": {
+        "locator": "xpath=//button[@aria-label='Sign In / Join']",
+        "description": "Sign In/ Join link",
+        "options": {}
+    }
+}

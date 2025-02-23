@@ -1,0 +1,18 @@
+{
+    "default": {
+        "paths": ["e2etests/cucumber/features/**/*.feature"],        
+        "require": [
+            "e2etests/cucumber/steps/**/*.ts"
+        ],
+        "requireModule": [
+            "ts-node/register"
+        ],
+        "format": [            
+            [
+                "html",
+                "reports/html-formatter.html"
+            ]
+        ],
+        "parallel": 2
+    }
+}
