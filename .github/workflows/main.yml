@@ -1,4 +1,5 @@
 name: Staging E2E Tests
+run-name: Staging E2E Tests
 on: [push]
 jobs:
   Install-Required-Libs :
