@@ -25,6 +25,6 @@ When('User enter the correct credential', async function () {
 
     log('User enter the correct credential');
     let loginPage = new LoginPage(getPage(), this.log);
-    await loginPage.login("aa.duchoang@gmail.com", "123456789@Xx");
+    await loginPage.login("aa.duchoang@gmail.com", "password@123");
 
 });
