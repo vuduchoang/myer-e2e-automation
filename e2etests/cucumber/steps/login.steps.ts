@@ -3,6 +3,8 @@ import { Browser, BrowserContext, Page, chromium, expect } from 'playwright/test
 import { getPage, log } from './hooks';
 import HomePage from '../../pages/homepage';
 import LoginPage from '../../pages/loginpage';
+import * as HomePageLoc from "../../locators/homepage.loc.json";
+
 
 
 Given('User is on login page', async function () {
@@ -16,15 +18,16 @@ Given('User is on login page', async function () {
 
     log('Verify that user is on login page');
     let title = await loginPage.getTitle();
-    expect(title).toEqual('Sign in | MYER');
+    expect(title).toEqual('Customer Login');
     
 });
 
 
-When('User enter the correct credential', async function () {
-
-    log('User enter the correct credential');
+When('User login as a registered user {string} and password {string}', async function (email, password) {
+    
     let loginPage = new LoginPage(getPage(), this.log);
-    await loginPage.login("aa.duchoang@gmail.com", "password@123");
+    
+    // Login with email & password
+    await loginPage.login(email, password);    
 
-});
+  });

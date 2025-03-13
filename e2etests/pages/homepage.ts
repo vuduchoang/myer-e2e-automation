@@ -19,9 +19,7 @@ export default class HomePage extends BasePage {
      * Click Login Link
      */
     async clickLogin() {
-        await this.click(homePageLoc.signinJoinLink);
-
-        await this.page.click("xpath=//a[text()='Sign In']");
+        await this.click(homePageLoc.signinLink);
     }
 }                                                                               
 

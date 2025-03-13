@@ -1,0 +1,27 @@
+{
+    "productName": {
+        "locator": "xpath=//div[@class='product-info-main']/div/h1/span",
+        "description": "Product Name",
+        "options": {}
+    },
+    "productPrice": {
+        "locator": "xpath=//div[@class='product-info-main']/div[@class='product-info-price']/div/span/span/span[@data-price-type='finalPrice']/span",
+        "description": "Product Price",
+        "options": {}
+    },
+    "productId": {
+        "locator": "xpath=//div[@class='product-info-stock-sku']/div[2]/div",
+        "description": "Product SKU",
+        "options": {}
+    },
+    "productQty": {
+        "locator": "xpath=//input[@id='qty']",
+        "description": "Product Quantity",
+        "options": {}
+    },
+    "addToCart": {
+        "locator": "xpath=//button[@id='product-addtocart-button']",
+        "description": "Add to Cart",
+        "options": {}
+    }
+}

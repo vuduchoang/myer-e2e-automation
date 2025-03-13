@@ -1,0 +1,17 @@
+{
+    "myAccountMenuItem": {
+        "locator": "xpath=//ul[@class='nav items']/li/a[contains(text(), 'My Account')]",
+        "description": "",
+        "options": {}
+    },
+    "myOrdersMenuItem": {
+        "locator": "xpath=//ul[@class='nav items']/li/a[contains(text(), 'My Orders')]",
+        "description": "My Orders menu item",
+        "options": {}
+    },
+    "myDownloadableMenuItem": {
+        "locator": "xpath=//ul[@class='nav items']/li/a[contains(text(), 'My Downloadable')]",
+        "description": "",
+        "options": {}
+    }
+}

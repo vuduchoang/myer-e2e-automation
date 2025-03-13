@@ -1,7 +1,13 @@
 {
-    "signinJoinLink": {
-        "locator": "xpath=//button[@aria-label='Sign In / Join']",
-        "description": "Sign In/ Join link",
+    "signinLink": {
+        "locator": "xpath=//header/div/div/ul/li[@class='authorization-link']/a[contains(text(), 'Sign In')]",
+        "description": "Sign In link",
+        "options": {}
+    },
+
+    "welcome": {
+        "locator": "xpath=//div[@class='content-heading']/h2",
+        "description": "Welcome header",
         "options": {}
     }
 }

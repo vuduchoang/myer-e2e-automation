@@ -1,18 +1,18 @@
 {
     "emailAddress": {
-        "locator": "xpath=//input[@id='username']",
+        "locator": "//input[@id='email']",
         "description": "Email Address field",
         "options": {}
     },
 
     "password": {
-        "locator": "xpath=//input[@id='password']",
+        "locator": "//input[@name='login[password]']",
         "description": "Password field",
         "options": {}
     },
 
     "signinBtn": {
-        "locator": "xpath=//button[@type='submit']",
+        "locator": "xpath=//button[@id='send2']",
         "description": "Sign In button",
         "options": {}
     }

@@ -1,0 +1,88 @@
+{
+    "cartItemsCount" : {
+        "locator": "xpath=//span[@data-bind='text: getCartSummaryItemsCount()']",
+        "description": "Cart Items Count",
+        "options": {}
+    },
+    "cartProductItem": {
+        "locator": "xpath=//li[@class='product-item']",
+        "description": "Cart Product Item",
+        "options": {}
+    },
+    "orderSummaryExpand": {
+        "locator": "xpath=//div[contains(@class, 'items-in-cart')]",
+        "description": "Order Summary Expand",
+        "options": {}
+    },
+    "firstName": {
+        "locator": "xpath=//input[@name='firstname']",
+        "description": "First Name input",
+        "options": {}
+    },
+    "lastName": {
+        "locator": "xpath=//input[@name='lastname']",
+        "description": "Last Name input",
+        "options": {}
+    },
+    "company": {
+        "locator": "xpath=//input[@name='company']",
+        "description": "Company input",
+        "options": {}
+    },
+    "streetAddress": {
+        "locator": "xpath=//input[@name='street[0]']",
+        "description": "Street Address input",
+        "options": {}
+    },
+    "city": {
+        "locator": "xpath=//input[@name='city']",
+        "description": "City input",
+        "options": {}
+    },
+    "state": {
+        "locator": "xpath=//select[@name='region_id']",
+        "description": "State select",
+        "options": {}
+    },
+    "zipcode": {
+        "locator": "xpath=//input[@name='postcode']",
+        "description": "Zip Code input",
+        "options": {}
+    },
+    "country": {
+        "locator": "xpath=//select[@name='country_id']",
+        "description": "Country select",
+        "options": {}
+    },
+    "phoneNumber": {
+        "locator": "xpath=//input[@name='telephone']",
+        "description": "Phone Number input",
+        "options": {}
+    },
+    "next": {
+        "locator": "xpath=//span[text()='Next']/parent::button",
+        "description": "Next btn",
+        "options": {}
+    },
+    "placeOrder": {
+        "locator": "xpath=//span[text()='Place Order']/parent::button",
+        "description": "Place Order btn",
+        "options": {}
+    },
+    "newAddress": {
+        "locator": "xpath=//span[text()='New Address']/parent::button",
+        "description": "New Address Btn",
+        "options": {}
+    },
+    "saveInAddressBook": {
+        "locator": "xpath=//input[@id='shipping-save-in-address-book']",
+        "description": "Save in address book",
+        "options": {}
+    },
+    "shipHere": {
+        "locator": "xpath=//span[text()='Ship here']/parent::button",
+        "description": "Ship here",
+        "options": {}
+    }
+
+}

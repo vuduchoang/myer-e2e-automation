@@ -4,7 +4,7 @@ import { Browser, BrowserContext, Page, chromium } from "playwright/test";
 import dotenv from "dotenv"
 
 // Set cucumber default timeout
-setDefaultTimeout(60 * 10000);
+setDefaultTimeout(180 * 10000);
 
 
 
@@ -61,7 +61,7 @@ BeforeAll( async function () {
     baseUrl = process.env.BASE_URL;
 
     // Create browser, browser context & page
-    browser = await chromium.launch({ headless: true, channel: browserName.toLowerCase(), args: ["--start-maximized"]});
+    browser = await chromium.launch({ headless: false, channel: browserName.toLowerCase(), args: ["--start-maximized"]});
     console.log('Run before all scenario');      
     
 });
@@ -92,7 +92,7 @@ Before(async function () {
     page = await browserContext.newPage();
 
     // Open the home page
-    await page.goto(baseUrl);    
+    await page.goto(baseUrl, { timeout: 60*1000 });    
 
 });
 
@@ -119,6 +119,10 @@ After(async function () {
 export function getPage(): Page {
     
     return page;
+}
+
+export function getBaseUrl(): string {
+    return baseUrl;
 }
 
 

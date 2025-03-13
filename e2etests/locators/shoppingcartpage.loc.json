@@ -1,0 +1,23 @@
+{
+    "cartItem": {
+        "locator": "xpath=//tbody[@class='cart item']",
+        "description": "Cart Item",
+        "options": {}
+    },
+    "removeCartItem": {
+        "locator": "xpath=//tbody[@class='cart item']/tr[@class='item-actions']/td/div/a[@title='Remove item']",
+        "description": "Remove Cart Item",
+        "options": {}
+    },
+    "cartEmpty": {
+        "locator": "xpath=//div[@class='cart-empty']",
+        "description": "Cart Empty",
+        "options": {}
+    },
+    "proceedToCheckout": {
+        "locator": "xpath=//span[text()='Proceed to Checkout']/parent::button",
+        "description": "Proceed To Checkout button",
+        "options": {}
+    }
+
+}
