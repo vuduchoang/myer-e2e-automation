@@ -61,7 +61,7 @@ BeforeAll( async function () {
     baseUrl = process.env.BASE_URL;
 
     // Create browser, browser context & page
-    browser = await chromium.launch({ headless: false, channel: browserName.toLowerCase(), args: ["--start-maximized"]});
+    browser = await chromium.launch({ headless: true, channel: browserName.toLowerCase(), args: ["--start-maximized"]});
     console.log('Run before all scenario');      
     
 });
