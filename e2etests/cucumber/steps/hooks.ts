@@ -1,7 +1,8 @@
-import {Before, After, BeforeAll, AfterAll, setDefaultTimeout} from "@cucumber/cucumber"
+import {Before, After, BeforeAll, AfterAll, setDefaultTimeout, Status} from "@cucumber/cucumber"
 import { ICreateLog } from "@cucumber/cucumber/lib/runtime/attachment_manager";
 import { Browser, BrowserContext, Page, chromium } from "playwright/test";
 import dotenv from "dotenv"
+import path from "path";
 
 // Set cucumber default timeout
 setDefaultTimeout(180 * 10000);
@@ -101,7 +102,22 @@ Before(async function () {
 /**
  * Run after each scenario
  */
-After(async function () {
+After(async function (scenario) {
+
+    // Take the screenshot if scenario failed
+    if(scenario.result?.status == Status.FAILED) {
+
+        // Current timestamp
+        const timestamp: number = Date.now();
+        
+        // Capture image
+        const img = await page.screenshot({
+            path: `./reports/screenshots/${timestamp}.png`
+        })
+
+        // Attach to report
+        this.attach(img, 'image/png');
+    }
 
     // Close page & browser context
     await page.close();    
