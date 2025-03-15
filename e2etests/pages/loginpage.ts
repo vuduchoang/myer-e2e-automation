@@ -19,5 +19,6 @@ export default class LoginPage extends BasePage {
         await this.fill(LoginPageLoc.emailAddress, email);
         await this.fill(LoginPageLoc.password, password);
         await this.click(LoginPageLoc.signinBtn);
+        await this.waitElementVisible(LoginPageLoc.loggedin);
     }
 }

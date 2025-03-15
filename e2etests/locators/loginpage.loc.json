@@ -15,5 +15,10 @@
         "locator": "xpath=//button[@id='send2']",
         "description": "Sign In button",
         "options": {}
+    },
+    "loggedin": {
+        "locator": "xpath=//span[@class='logged-in']",
+        "description": "Logged in status",
+        "options": {}
     }
 }
