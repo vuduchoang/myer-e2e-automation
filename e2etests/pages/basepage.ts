@@ -96,9 +96,8 @@ export default class BasePage {
      */
     async goto(url: string) {
         this.log("Go to the url: " + url);
-        await this.page.goto(url, { waitUntil: 'networkidle' });
-        await this.page.waitForLoadState("load");
-        await this.page.waitForLoadState('domcontentloaded');
+        await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+        await this.page.waitForLoadState('networkidle');
     }
 
 
