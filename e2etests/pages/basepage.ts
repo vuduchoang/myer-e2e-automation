@@ -34,6 +34,10 @@ export default class BasePage {
         this.log('Click on ' + object['description']);
 
         await this.page.click(object['locator'], object['options']);
+
+        // Wait page load complete
+        await this.page.waitForLoadState('domcontentloaded');
+        await this.page.waitForLoadState('networkidle');
     }
 
     /**
@@ -96,8 +100,8 @@ export default class BasePage {
      */
     async goto(url: string) {
         this.log("Go to the url: " + url);
-        await this.page.goto(url, {timeout: 60000});
-        await this.page.waitForLoadState('load');
+
+        await this.page.goto(url, {waitUntil: 'domcontentloaded'});
         await this.page.waitForLoadState('networkidle');
     }
 
